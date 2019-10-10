@@ -11,7 +11,7 @@ draw top of hour glass
 		draw (10 - 2*line) dots (:) on the output line
 		draw slash
 		go to new line
-draw bottom of hourglass
+draw bottom of hour glass
 	for (lines 1- 4)
 		draw slash
 		draw (2 + 2*line) dots (:) on the output line
@@ -40,7 +40,7 @@ public class Hourglass {
 	
 	public static void topHalf() {					/*makes top half of the hour glass*/
 		for (int lines = 0; lines < HALF_HEIGHT; lines++) {		/*prints the height of the top half*/
-			for (int spaces = 0; (spaces <= lines); spaces++) {			
+			for (int spaces = 0; spaces <= lines; spaces++) {			
 				System.out.print(" ");				/*prints spaces before each line*/
 			}
 			System.out.print("\\");					/*starts the hour glass figure*/
@@ -64,7 +64,11 @@ public class Hourglass {
 	}
 	
 	public static void bottomHalf() {				/*makes the bottom half of the hour glass*/
-		
+		for (int lines = 0; lines < HALF_HEIGHT; lines++) {
+			for (int spaces = 0; spaces <= lines; spaces ++) {
+				System.out.println(" ");
+			}
+		}
 	}
 	
 
