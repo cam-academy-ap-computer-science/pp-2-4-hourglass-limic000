@@ -1,8 +1,9 @@
 /*
+make a constant for the height
 draw dashed line
 	make a function:
 		draw | sign
-		draw 10 " s
+		draw height constant - 2 worth of "
 		draw another | sign
 draw top of hour glass
 	for (lines 1 - 4)
@@ -25,15 +26,47 @@ public class Hourglass {
 	
 	public static void main(String[] args) {
 		dashedLine();
+		topHalf();
+		verticalLines();
 	}
 	
-	public static void dashedLine() {
-		System.out.println("|");
+	public static void dashedLine() {			 /*first line*/
+		System.out.print("|");
 		for (int i = 1; i <= (2+2*HALF_HEIGHT); i++) {
-			System.out.println("\"");
+			System.out.print("\"");				 /*makes (2+2*the height of half) worth of dashes*/
 		}
 		System.out.println("|");
 	}
+	
+	public static void topHalf() {					/*makes top half of the hour glass*/
+		for (int lines = 0; lines < HALF_HEIGHT; lines++) {		/*prints the height of the top half*/
+			for (int spaces = 0; (spaces <= lines); spaces++) {			
+				System.out.print(" ");				/*prints spaces before each line*/
+			}
+			System.out.print("\\");					/*starts the hour glass figure*/
+			for (int colons = 0; colons < (2*HALF_HEIGHT-2*lines); colons++) {		
+				System.out.print(":");				/*prints the number of colons for each line*/
+			}
+			System.out.println("/");				/*finishes the hour glass for the top half*/
+		}
+	}
+	
+	public static void verticalLines() {			/*draws the vertical lines in the middle with spaces*/
+		middleSpace();
+		System.out.print(" ||");
+		middleSpace();
+	}
+	
+	public static void middleSpace() { 				/*makes the space before and after the two vertical lines in the center*/
+		for (int x = 1; x <= HALF_HEIGHT; x++){
+			System.out.print(" ");
+		}
+	}
+	
+	public static void bottomHalf() {				/*makes the bottom half of the hour glass*/
+		
+	}
+	
 
 
 }
