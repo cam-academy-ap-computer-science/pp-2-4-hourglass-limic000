@@ -28,6 +28,9 @@ public class Hourglass {
 		dashedLine();
 		topHalf();
 		verticalLines();
+		System.out.println();					/*starts a new line after the vertical lines*/
+		bottomHalf();
+		dashedLine();
 	}
 	
 	public static void dashedLine() {			 /*first line*/
@@ -47,7 +50,7 @@ public class Hourglass {
 			for (int colons = 0; colons < (2*HALF_HEIGHT-2*lines); colons++) {		
 				System.out.print(":");				/*prints the number of colons for each line*/
 			}
-			System.out.println("/");				/*finishes the hour glass for the top half*/
+			System.out.println("/");				/*finishes the hour glass's other side*/
 		}
 	}
 	
@@ -65,12 +68,14 @@ public class Hourglass {
 	
 	public static void bottomHalf() {				/*makes the bottom half of the hour glass*/
 		for (int lines = 0; lines < HALF_HEIGHT; lines++) {
-			for (int spaces = 0; spaces <= lines; spaces ++) {
-				System.out.println(" ");
+			for (int spaces = 0; spaces <= (3-lines); spaces ++) {
+				System.out.print(" ");				/*creates spaces the other way around*/
 			}
+			System.out.print("/");					/*left side of the hour glass*/
+			for (int colons = 0; colons < (2+ 2*lines); colons++) {
+				System.out.print(":");				/*prints the colons in the other way*/
+			}
+			System.out.println("\\");				/*right side of the hour glass*/
 		}
 	}
-	
-
-
 }
