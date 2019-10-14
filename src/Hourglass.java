@@ -68,7 +68,7 @@ public class Hourglass {
 	
 	public static void bottomHalf() {				/*makes the bottom half of the hour glass*/
 		for (int lines = 0; lines < HALF_HEIGHT; lines++) {
-			for (int spaces = 0; spaces <= (3-lines); spaces ++) {
+			for (int spaces = 0; spaces <= (HALF_HEIGHT-(lines+1)); spaces ++) {
 				System.out.print(" ");				/*creates spaces the other way around*/
 			}
 			System.out.print("/");					/*left side of the hour glass*/
