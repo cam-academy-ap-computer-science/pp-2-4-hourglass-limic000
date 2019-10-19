@@ -1,3 +1,20 @@
+/***** 
+ * Grading Comments:   27/25 pts
+ * Excellent. 
+ *  Your program obviously does everything well.
+ *  Your pseudocode and comments are great.
+ *  I really like the naming conventions for the for loop variables.
+ *  Your code is clean and economical.
+ *  
+ * Correct Output 10/10
+ * Proper Use of Static Methods 3/3
+ * Proper Use of for loops 3/3
+ * Pseudocode 3/3
+ * Comments 2/2
+ * Consistent Layout and Style 2/2  
+ * Proper Use of Class Constant 2/2    
+ * Resizing extra credit: 2/2
+ */ 
 /*
 make a constant for the height
 draw dashed line
